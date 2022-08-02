@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- percentage：进度百分比 -->
+    <!-- color:进度条颜色 -->
+    <!-- stroke-width:进度条宽度 -->
+    <Progress percentage="50"></Progress>
+    <Progress percentage="20" color="green"></Progress>
+    <Progress percentage="20" color="pink" stroke-width="200"></Progress>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Progress from "@/components/Progress.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Progress,
+  },
+  data() {
+    return {};
+  },
+
+  created() {},
+
+  methods: {},
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style scoped></style>
